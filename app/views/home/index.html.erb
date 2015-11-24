@@ -1,2 +1,4 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Hello <i><%= current_user.username %></i></h1>
+<%= form_tag session_path, method: :delete do %>
+  <%= submit_tag 'Logout' %>
+<% end %>
